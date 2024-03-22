@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +8,105 @@
     <link rel="shortcut icon" href="images/icons8-ethereum-settings-53 (1).png" type="image/x-icon"> <!-- Favicon link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> <!-- Google Fonts -->
     <script src="https://kit.fontawesome.com/ee6bf6084f.js" crossorigin="anonymous"></script> <!-- Font Awesome Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" /> <!-- Daisy Ui -->
     <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind Css -->
+    <!-- Added Custom Tailwind -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'bike-color': '#E76F51',
+                'bike-color-bg': 'rgba(231, 111, 81, 0.10)',
+              }
+            }
+          }
+        }
+      </script>
 </head>
-<body>
-    
+<body class="Font-Poppins">
+    <header class="max-w-screen-lg lg:mx-auto px-2 lg:pt-4 lg:px-0"> <!-- Header Section Start -->
+        <nav> <!-- Nav Section Start -->
+            <div class="navbar bg-base-100 p-0">
+                <div class="flex-1">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden px-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content text-base mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a class="class="focus:bg-transparent">Home</a></li>
+                      <li><a>Shop</a></li>
+                      <li><a>News</a></li>
+                      <li><a>Contact</a></li>
+                    </ul>
+                  </div>
+                  <a class="hover:bg-transparent btn btn-ghost text-2xl lg:text-4xl px-0">Bike Dekho</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal text-base px-1">
+                    <li><a class="hover:bg-transparent">Home</a></li>
+                    <li><a class="hover:bg-transparent">Shop</a></li>
+                    <li><a class="hover:bg-transparent">News</a></li>
+                    <li><a class="hover:bg-transparent">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="">
+                  <a class="btn btn-primary bg-bike-color px-7 border-transparent text-white rounded-sm hover:bg-bike-color hover:border-transparent">Login</a>
+                </div>
+              </div>
+        </nav> <!-- Nav Section End -->
+
+        <div class="carousel w-full lg:h-[550px] bg-bike-color-bg"> <!-- Slider Section Start -->
+          <!-- Slider-01 -->
+          <div id="slide1" class="carousel-item relative w-full">
+            <div class="flex flex-col md:flex-row lg:flex-row px-4 py-8 md:px-20 md:items-center lg:p-24 gap-0 lg:gap-10">
+              <div class="space-y-2 lg:space-y-7 flex-1">
+                <h2 class="text-2xl md:text-4xl lg:text-6xl font-bold">
+                  Ride-on R15 V4 <br> with Smile
+                </h2>
+                <p>Amet minim mollit non deserunt ullamco <br>est sit aliqua dolor do amet sint. Velit officia consequat <br> duis enim velit mollit.</p>
+                <button class="mb-14 lg:pb-0"><a class="btn btn-primary bg-bike-color px-7 border-transparent text-white rounded-sm hover:bg-bike-color hover:border-transparent">Purchase</a></button>
+              </div>
+              <div class="flex-1">
+                <img src="/images/slider/bike1.png" class="w-full" />
+              </div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-4 right-4 lg:left-5 lg:right-5 top-1/2">
+              <a href="#slide4" class="btn btn-circle mt-8 md:mt-0 lg:mt-0">❮</a> 
+              <a href="#slide2" class="btn btn-circle mt-8 md:mt-0 lg:mt-0">❯</a>
+            </div>
+          </div> 
+          <!-- slide-02 -->
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="/images/slider/bike2.png" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide1" class="btn btn-circle">❮</a> 
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+          <!-- Slider-03 -->
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="/images/slider/bike3.png" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide2" class="btn btn-circle">❮</a> 
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+          <!-- Slider-04 -->
+          <div id="slide4" class="carousel-item relative w-full">
+            <img src="/images/slider/bike4.png" class="w-full" />
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide3" class="btn btn-circle">❮</a> 
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div>
+        </div> <!-- Slider Section End -->
+        
+    </header> <!-- Header Seection End -->
+    <main class="max-w-screen-lg lg:mx-auto"></main>
+    <footer></footer>
 </body>
 </html>
